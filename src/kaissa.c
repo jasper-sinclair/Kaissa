@@ -4,6 +4,7 @@
  *=============================================================================*/
 #include <ctype.h>
 #include <stdarg.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -585,6 +586,9 @@ static void uci_new_game(void);
 static void parse_uci_go(char* cmd);
 static void parse_uci_setoption(char* cmd);
 static void print_uci_score(int score, int side_to_move);
+// Perft
+static unsigned long long perft(int depth);
+static void perft_root(int depth);
 /*=============================================================================
  * Bit Utilities
  *=============================================================================*/
@@ -1317,6 +1321,20 @@ static void process_console_command(char* cmd){
     }
     fflush(stdout);
   }
+  else if (strncmp(cmd, "perft", 5) == 0) {
+
+    int depth=1;
+
+    sscanf(cmd + 5, "%d", &depth);
+
+    if (depth < 1)
+      depth=1;
+
+    if (depth > 10)
+      depth=10;
+
+    perft_root(depth);
+    }
 
   /* ------------------------------------------------------------------ */
   /* QUIT / EXIT / BYE                                                   */
@@ -4416,6 +4434,10 @@ static int timer_elapsed_ms_portable(void){
   clock_t now = clock();
   return (int)((now - search_start_time) * 1000 / CLOCKS_PER_SEC);
 }
+static unsigned int timer_ms_now(void) {
+  return (unsigned int)
+    (clock() * 1000 / CLOCKS_PER_SEC);
+}
 
 static void print_time_info(void){
   if (! xboard_mode) return;
@@ -5047,6 +5069,52 @@ int search_best_move(MOVE* best_move){
   }
 
   return (best_index >= 0 && best_move->from != DUMMY);
+}
+
+static unsigned long long perft(const int depth) {
+  MOVE moves[256];
+  MOVE* first=moves;
+  MOVE* last=moves;
+  if (depth <= 0)
+    return 1ULL;
+  generate_legal_moves(&first, &last);
+  unsigned long long nodes=0ULL;
+  for (MOVE* mp=first; mp < last; mp++) {
+    if (make_move(mp) == 0) {
+      nodes+=perft(depth - 1);
+      take_back_move();
+    }
+  }
+  return nodes;
+}
+
+static void perft_root(const int depth) {
+  MOVE moves[256];
+  MOVE* first=moves;
+  MOVE* last=moves;
+  unsigned long long total=0ULL;
+  const unsigned int start_ms= timer_ms_now();
+  generate_legal_moves(&first, &last);
+  for (MOVE* mp=first; mp < last; mp++) {
+    char ms[16];
+    move_to_string(mp, ms);
+    if (make_move(mp) == 0) {
+      const unsigned long long nodes= perft(depth - 1);
+      take_back_move();
+      printf("%s: %llu\n", ms, nodes);
+      total+=nodes;
+    }
+  }
+  const unsigned int elapsed_ms= timer_ms_now() - start_ms;
+  printf("\n");
+  printf("Nodes = %llu\n", total);
+  printf("Time = %u ms\n", elapsed_ms);
+  if (elapsed_ms > 0) {
+    const unsigned long long nps= (total * 1000ULL) / elapsed_ms;
+    printf("NPS = %llu\n", nps);
+  }
+  printf("\n");
+  fflush(stdout);
 }
 
 /*=============================================================================
@@ -5970,6 +6038,10 @@ static void process_uci_command(char* cmd){
     parse_uci_go(cmd);
   } else if (strcmp(cmd,"stop") == 0){
     stop_search = 1;
+  } else if (strncmp(cmd, "perft", 5) == 0) {
+    int depth=1;
+    sscanf(cmd + 5, "%d", &depth);
+    perft_root(depth);
   } else if (strcmp(cmd,"quit") == 0){
     exit(0);
   }
