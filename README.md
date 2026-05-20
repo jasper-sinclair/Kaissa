@@ -1,5 +1,5 @@
 # Kaissa
-Groundbreaking 1970s/1980s era chess machine, now with full UCI support
+Groundbreaking 1970s era chess machine, now with full UCI support
 
 ## About Kaissa:
 A chess engine developed in the Soviet Union in the 1960s...the first world computer chess champion (1974 in Stockholm)
@@ -7,17 +7,14 @@ A chess engine developed in the Soviet Union in the 1960s...the first world comp
 ## Features
 
 ## Port
-This code has been ported and updated for modern systems by Jim Ablett, with recent fixes to its move
-encoding, buffer overflows, and console mode. The port, which often runs via WinBoard, features an
-integrated opening book (book.dat) and handles algebraic notation.
+This code has been ported and updated for modern systems by Jim Ablett, and runs via WinBoard.
 
-See: https://talkchess.com/viewtopic.php?t=86164
+See: https://talkchess.com/viewtopic.php?t=86229
 
 ## Additions/Changes:
 
 This repository contains Jim's orignal port and the following additions/changes:
 - Full UCI support
-- Parse FEN positions
 - Formatting -> 4 space tabs replaced with 2 space tabs
 - Clang local variable and function parameter const warnings resolved
 
@@ -42,13 +39,12 @@ You can use included wb.bat or uci.bat to start the engine this way.
 Console mode is the default if starting the engine without parameters-> "chess6.exe", after that just hit ENTER to start a game.
 
 In console mode, you simply make your move in algebraic format, for ex: e2e4 then hit enter.
-After the engine announces it's move, hit ENTER again to see the board reprentation.
-
+After the engine announces it's move, Kaissa will make it's move and you'll see the current board reprentation.
 
 ## Arena
 Choose Engines then Manage from the drop down menu.
 
-Add -uci -nobook -post (or whatever options you want) to the engine's Command Line Parameter input field.
+Add -uci (or whatever options you want) to the engine's Command Line Parameter input field.
 
 ![Arena Screenshot](arena.png)
 

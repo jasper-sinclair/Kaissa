@@ -1,0 +1,2 @@
+kaissa.exe -xboard
+pause
