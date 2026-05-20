@@ -4,7 +4,7 @@ Groundbreaking 1970s era chess machine, now with full UCI support
 ## About:
 A chess engine developed in the Soviet Union in the 1960s. It became the first world computer chess champion...(1974 in Stockholm).
 
-![authors](baisley_donskoy.png)
+![authors](docs/baisley_donskoy.png)
 
 ## Features
 https://www.chessprogramming.org/Kaissa
@@ -63,7 +63,7 @@ Choose Engines then Manage from the drop down menu.
 
 Add -uci to the engine's Command Line Parameter input field.
 
-![Arena Screenshot](arena.png)
+![Arena Screenshot](docs/arena.png)
 
 ## Compiling
 Visual Studio 2026 project files are included.
