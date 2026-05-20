@@ -1,0 +1,36 @@
+[Event "Computer chess game"]
+[Site "MARS"]
+[Date "2026.05.20"]
+[Round "?"]
+[White "Kaissa UCI"]
+[Black "Kaissa WB"]
+[Result "1/2-1/2"]
+[BlackElo "2000"]
+[ECO "C43"]
+[Opening "Russian Game"]
+[Time "21:08:15"]
+[Variation "Modern (Steinitz) Attack"]
+[WhiteElo "2000"]
+[TimeControl "300+3"]
+[Termination "normal"]
+[PlyCount "152"]
+[WhiteType "human"]
+[BlackType "human"]
+
+1. e4 e5 2. Nf3 Nf6 3. d4 d5 4. dxe5 Nxe4 5. Bb5+ c6 6. Bd3 Be7 7. O-O O-O
+8. Nbd2 Nc5 9. Nb3 Nxd3 10. Qxd3 Bg4 11. h3 Bh5 12. Rd1 Nd7 13. Bf4 Qb6 14.
+Qe2 Rae8 15. Re1 Bd6 16. Qd3 Bc5 17. Qe2 Re7 18. a4 Rfe8 19. a5 Bxf3 20.
+axb6 Bxe2 21. bxa7 Ra8 22. Rxe2 Bxa7 23. e6 Nf8 24. exf7+ Rxf7 25. Be3 Re7
+26. Kf1 b6 27. Bxb6 Rxe2 28. Kxe2 Re8+ 29. Be3 Bxe3 30. fxe3 Ng6 31. g3 Ne5
+32. Nd2 Nd7 33. b4 Nf6 34. Kd3 Ne4 35. Nxe4 Rxe4 36. Ra6 Rxb4 37. Rxc6 Kf7
+38. Rd6 Rb5 39. Rd7+ Kf6 40. Kd4 Rb2 41. Rc7 Rb5 42. c3 h5 43. Rd7 Ke6 44.
+Rxg7 Rb2 45. e4 Rd2+ 46. Ke3 Rc2 47. Kd3 Rf2 48. exd5+ Kxd5 49. c4+ Kd6 50.
+Rg5 Kc6 51. c5 Rf3+ 52. Kc4 h4 53. Rg6+ Kc7 54. gxh4 Rf4+ 55. Kb5 Rxh4 56.
+Rg7+ Kd8 57. c6 Rxh3 58. Kb6 Rb3+ 59. Kc5 Rh3 60. Rd7+ Kc8 61. Re7 Rh2 62.
+Rg7 Rc2+ 63. Kd6 Rd2+ {-1.17/18} 64. Ke6 Rc2 65. Kd5 {+0.21/18} Rd2+
+{-0.96/18} 66. Kc4 {+0.11/18} Rc2+ 67. Kb5 {+0.12/18} Rb2+ {-0.90/18} 68.
+Ka6 {+0.11/18} Ra2+ {-0.90/18} 69. Kb6 {+0.10/18} Rb2+ {-0.90/18} 70. Ka5
+{+0.07/18} Rc2 {-0.90/18} 71. Rg6 {+0.11/18} Rb2 {-0.90/18} 72. Rh6
+{0.00/18} Kc7 {-0.90/18} 73. Rf6 {0.00/18} Rb3 {-0.90/18} 74. Ka4 {0.00/18}
+Rb6 {-0.90/18} 75. Ka3 {0.00/18} Rxc6 {-0.90/18} 76. Rxc6+ Kxc6
+{Insufficient material Insufficient material} 1/2-1/2
