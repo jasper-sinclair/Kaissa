@@ -19,7 +19,19 @@ See: https://talkchess.com/viewtopic.php?t=86229
 ## Additions/Changes:
 
 This repository contains Jim's orignal port and the following additions/changes:
-- Full UCI support
+- Full UCI support, including:
+
+```
+process_uci_command
+parse_uci_position
+parse_uci_setoption
+uci_new_game
+parse_uci_go
+void uci_go_search
+void send_uci_bestmove
+print_uci_score
+```
+
 - Formatting -> 4 space tabs replaced with 2 space tabs
 - Clang local variable and function parameter const warnings resolved
 
