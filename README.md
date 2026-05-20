@@ -49,7 +49,7 @@ After the engine announces it's move, Kaissa will make it's move and you'll see 
 ## Arena
 Choose Engines then Manage from the drop down menu.
 
-Add -uci (or whatever options you want) to the engine's Command Line Parameter input field.
+Add -uci to the engine's Command Line Parameter input field.
 
 ![Arena Screenshot](arena.png)
 
