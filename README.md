@@ -8,6 +8,7 @@ A chess engine developed in the Soviet Union in the 1960s...the first world comp
 
 ## Features
 https://www.chessprogramming.org/Kaissa
+
 https://en.wikipedia.org/wiki/Kaissa
 
 ## Port
