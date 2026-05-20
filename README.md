@@ -4,7 +4,11 @@ Groundbreaking 1970s era chess machine, now with full UCI support
 ## About Kaissa:
 A chess engine developed in the Soviet Union in the 1960s...the first world computer chess champion (1974 in Stockholm)
 
+![authors](baisley_donskoy.png)
+
 ## Features
+https://www.chessprogramming.org/Kaissa
+https://en.wikipedia.org/wiki/Kaissa
 
 ## Port
 This code has been ported and updated for modern systems by Jim Ablett, and runs via WinBoard.
@@ -36,7 +40,7 @@ For example:
 You can use included wb.bat or uci.bat to start the engine this way.
 
 ## Console Mode
-Console mode is the default if starting the engine without parameters-> "chess6.exe", after that just hit ENTER to start a game.
+Console mode is the default if starting the engine without parameters-> "kaissa.exe", after that just hit ENTER to start a game.
 
 In console mode, you simply make your move in algebraic format, for ex: e2e4 then hit enter.
 After the engine announces it's move, Kaissa will make it's move and you'll see the current board reprentation.
@@ -58,6 +62,6 @@ Processor 13th Gen Intel(R) Core(TM) i9-13900K (3.00 GHz)
 Installed RAM 32.0 GB (31.7 GB usable)
 
 ```
-chess6.exe -uci -nobook -post
+chess6.exe -uci
 perft 6
 ```
