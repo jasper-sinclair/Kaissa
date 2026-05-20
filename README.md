@@ -75,6 +75,6 @@ Processor 13th Gen Intel(R) Core(TM) i9-13900K (3.00 GHz)
 Installed RAM 32.0 GB (31.7 GB usable)
 
 ```
-chess6.exe -uci
+kaissa.exe -uci
 perft 6
 ```
