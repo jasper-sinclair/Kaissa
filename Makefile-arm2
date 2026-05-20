@@ -1,0 +1,11 @@
+all:
+	 aarch64-linux-android21-clang -o kaissa_ja_aarch64 *.c  -march=armv8-a+fp+simd+crypto+crc \
+	 -mfpu=neon -ftree-vectorize -lm -latomic -m64 -stdlib=libc -fPIE -pie -flto=auto -Ofast -pipe \
+	 -finline-functions -pthread -mpopcnt -fuse-ld=lld -MMD -MP -ffast-math -funroll-loops -fno-rtti -fstrict-aliasing -fomit-frame-pointer \
+	 -s -w -funsafe-math-optimizations -fsee 
+	
+	
+	
+	#  -march=armv8-a+fp+simd+crypto+crc
+	 
+	#  -march=armv8.2-a+dotprod+fp+simd+crypto+crc

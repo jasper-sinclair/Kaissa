@@ -1,0 +1,9 @@
+all:
+	armv7a-linux-androideabi21-clang -o kaissa_ja_armv7a *.c -mthumb -march=armv7-a -mfloat-abi=softfp -mfpu=neon \
+	-lm -latomic -m32 -stdlib=lib -fPIE -pie -flto=auto -Ofast -pipe -finline-functions \
+	-mpopcnt -pthread -fuse-ld=lld -MMD -MP -ffast-math -funroll-loops -fno-rtti -fstrict-aliasing -fomit-frame-pointer -s -w \
+	-funsafe-math-optimizations -fsee
+	
+	
+	 
+	
