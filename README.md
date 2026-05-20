@@ -1,8 +1,8 @@
 # Kaissa
 Groundbreaking 1970s era chess machine, now with full UCI support
 
-## About Kaissa:
-A chess engine developed in the Soviet Union in the 1960s...the first world computer chess champion (1974 in Stockholm)
+## About:
+A chess engine developed in the Soviet Union in the 1960s. It became the first world computer chess champion...(1974 in Stockholm).
 
 ![authors](baisley_donskoy.png)
 
